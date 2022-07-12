@@ -18,7 +18,7 @@ public class AnimationStateController1 : MonoBehaviour
     {
         bool isWalking = animator.GetBool("isWalking");
         bool forwardPressed = Input.GetKey("w");
-        bool isSpinning = Input.GetKey("a");
+        bool isSpinning = Input.GetKey("left shift");
     
         if (!isWalking && forwardPressed)
         {
@@ -37,7 +37,7 @@ public class AnimationStateController1 : MonoBehaviour
         }
         if(!forwardPressed || !isSpinning)
         {
-            animator.SetBool("isSpinning", false);
+               animator.SetBool("isSpinning", false);
         }
     }
 }
