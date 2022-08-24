@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnimationStateController1 : MonoBehaviour
 {
+    public float speed = .05f;
     Animator animator;
 
     // Start is called before the first frame update
@@ -18,28 +19,65 @@ public class AnimationStateController1 : MonoBehaviour
     {
         bool isWalking = animator.GetBool("isWalking");
         bool forwardPressed = Input.GetKey("w");
-        bool isSpinning = Input.GetKey("left shift");
+
+        bool flyRight =animator.GetBool("flyRight");
+        bool rightPressed = Input.GetKey("d");
+
+        bool flyLeft = animator.GetBool("flyLeft");
+        bool leftPressed = Input.GetKey("a");
+
+        bool flyBack =animator.GetBool("flyBack");
+        bool backPressed = Input.GetKey("s");
+
     
         if (!isWalking && forwardPressed)
-        {
+            {
             animator.SetBool("isWalking", true);
-        }
+            }
 
         if (isWalking && !forwardPressed)
-        {
+            {
             animator.SetBool("isWalking", false);
-        }
+            }
 
-        if (forwardPressed && isSpinning)
-        {
-            animator.SetBool("isSpinning", true);
-         
-        }
-        if(!forwardPressed || !isSpinning)
-        {
-               animator.SetBool("isSpinning", false);
-        }
+        if (!flyRight && rightPressed)
+            {
+                animator.SetBool("flyRight", true);
+            }
+        if (flyRight && !rightPressed)
+            {
+                animator.SetBool("flyRight", false);
+            }
+        if (!flyLeft && leftPressed)
+            {
+                animator.SetBool("flyLeft", true);
+            }
+        if (flyLeft && !leftPressed)
+            {
+                animator.SetBool("flyLeft", false);
+            }
+        
+        if (!flyBack && backPressed)
+            {
+                animator.SetBool("flyBack", true);
+            }
+        if(flyBack && !backPressed)
+            {
+                animator. SetBool("flyBack", false);
+            }
+
+        float xDirection = Input.GetAxis("Horizontal");
+        float zDirection = Input.GetAxis("Vertical");
+        
+
+        Vector3 moveDirection = new Vector3(xDirection, 0.0f, zDirection);
+
+        transform.position += moveDirection * speed;
+
+
+        
     }
+
 }
 
 

@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: cde205653077c458b96a34870f8af1a1
 ModelImporter:
-  serializedVersion: 19300
+  serializedVersion: 21300
   internalIDToNameTable:
   - first:
       1: 100000
@@ -965,11 +965,15 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
     animationImportErrors: 
-    animationImportWarnings: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Character1_RightLeg' has translation animation
+      that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
@@ -995,7 +999,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -1010,7 +1014,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 0.9
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -1023,20 +1027,27 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
+    optimizeBones: 1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -1807,14 +1818,12 @@ ModelImporter:
     - name: Character1_Ctrl_LeftAnkleEffector
       parentName: Character1_Ctrl_Reference
       position: {x: -0.25509024, y: 0.031603582, z: -0.10458597}
-      rotation: {x: 0.00000017136334, y: 0.00000011922383, z: -0.000000031432133,
-        w: 1}
+      rotation: {x: 0.00000017136334, y: 0.00000011922383, z: -0.000000031432133, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Ctrl_RightAnkleEffector
       parentName: Character1_Ctrl_Reference
       position: {x: 0.22681572, y: 0.024303589, z: -0.07280919}
-      rotation: {x: 0.00000044703478, y: 0.000000042608004, z: -0.00000004656612,
-        w: 1}
+      rotation: {x: 0.00000044703478, y: 0.000000042608004, z: -0.00000004656612, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Ctrl_LeftWristEffector
       parentName: Character1_Ctrl_Reference
@@ -2024,8 +2033,7 @@ ModelImporter:
     - name: Character1_Ctrl_LeftHandThumb1
       parentName: Character1_Ctrl_LeftHand
       position: {x: -0.0029124068, y: -0.03487938, z: 0.04016377}
-      rotation: {x: 0.000000031169044, y: 0.000000016485048, z: 0.000000012604848,
-        w: 1}
+      rotation: {x: 0.000000031169044, y: 0.000000016485048, z: 0.000000012604848, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Ctrl_LeftHandThumb2
       parentName: Character1_Ctrl_LeftHandThumb1
@@ -2055,20 +2063,17 @@ ModelImporter:
     - name: Character1_Ctrl_LeftHandIndex3
       parentName: Character1_Ctrl_LeftHandIndex2
       position: {x: -0.017311249, y: -0.029551849, z: 0.01104538}
-      rotation: {x: 0.000000037816857, y: 0.00000006269911, z: -0.00000015757006,
-        w: 1}
+      rotation: {x: 0.000000037816857, y: 0.00000006269911, z: -0.00000015757006, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Ctrl_LeftHandIndex4
       parentName: Character1_Ctrl_LeftHandIndex3
       position: {x: -0.0062509915, y: -0.021850433, z: 0.00446249}
-      rotation: {x: 0.000000011392284, y: 0.000000058188025, z: -0.00000019416629,
-        w: 1}
+      rotation: {x: 0.000000011392284, y: 0.000000058188025, z: -0.00000019416629, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Ctrl_LeftHandMiddle1
       parentName: Character1_Ctrl_LeftHand
       position: {x: -0.086102255, y: -0.06967491, z: 0.045332856}
-      rotation: {x: 0.00000006437078, y: -0.00000008429097, z: -0.000000047877318,
-        w: 1}
+      rotation: {x: 0.00000006437078, y: -0.00000008429097, z: -0.000000047877318, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Ctrl_LeftHandMiddle2
       parentName: Character1_Ctrl_LeftHandMiddle1
@@ -2078,8 +2083,7 @@ ModelImporter:
     - name: Character1_Ctrl_LeftHandMiddle3
       parentName: Character1_Ctrl_LeftHandMiddle2
       position: {x: -0.011928863, y: -0.03506233, z: 0.006449451}
-      rotation: {x: 0.00000003366261, y: -0.000000037910237, z: 0.00000014669195,
-        w: 1}
+      rotation: {x: 0.00000003366261, y: -0.000000037910237, z: 0.00000014669195, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Ctrl_LeftHandMiddle4
       parentName: Character1_Ctrl_LeftHandMiddle3
@@ -2089,8 +2093,7 @@ ModelImporter:
     - name: Character1_Ctrl_LeftHandRing1
       parentName: Character1_Ctrl_LeftHand
       position: {x: -0.08272419, y: -0.06998352, z: 0.015796056}
-      rotation: {x: -0.000000022931587, y: 0.000000029477059, z: -0.000000038168064,
-        w: 1}
+      rotation: {x: -0.000000022931587, y: 0.000000029477059, z: -0.000000038168064, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Ctrl_LeftHandRing2
       parentName: Character1_Ctrl_LeftHandRing1
@@ -2110,8 +2113,7 @@ ModelImporter:
     - name: Character1_Ctrl_LeftHandPinky1
       parentName: Character1_Ctrl_LeftHand
       position: {x: -0.078073464, y: -0.072282106, z: -0.01354474}
-      rotation: {x: -0.000000022931587, y: 0.000000029477059, z: -0.000000038168064,
-        w: 1}
+      rotation: {x: -0.000000022931587, y: 0.000000029477059, z: -0.000000038168064, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Ctrl_LeftHandPinky2
       parentName: Character1_Ctrl_LeftHandPinky1
@@ -2126,8 +2128,7 @@ ModelImporter:
     - name: Character1_Ctrl_LeftHandPinky4
       parentName: Character1_Ctrl_LeftHandPinky3
       position: {x: 0.006222839, y: -0.01869316, z: 0.0037385654}
-      rotation: {x: 0.00000010457212, y: -0.000000047766537, z: 0.000000010924704,
-        w: 1}
+      rotation: {x: 0.00000010457212, y: -0.000000047766537, z: 0.000000010924704, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Ctrl_RightShoulder
       parentName: Character1_Ctrl_Spine2
@@ -2177,8 +2178,7 @@ ModelImporter:
     - name: Character1_Ctrl_RightHandIndex2
       parentName: Character1_Ctrl_RightHandIndex1
       position: {x: 0.020385971, y: -0.024337234, z: 0.015282993}
-      rotation: {x: -0.000000011031529, y: -0.0000000064621855, z: 0.0000000024153237,
-        w: 1}
+      rotation: {x: -0.000000011031529, y: -0.0000000064621855, z: 0.0000000024153237, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Ctrl_RightHandIndex3
       parentName: Character1_Ctrl_RightHandIndex2
@@ -2238,8 +2238,7 @@ ModelImporter:
     - name: Character1_Ctrl_RightHandPinky2
       parentName: Character1_Ctrl_RightHandPinky1
       position: {x: 0.0115211485, y: -0.022379836, z: 0.0016125584}
-      rotation: {x: -0.00000008566887, y: -0.000000005971731, z: 0.00000002708899,
-        w: 1}
+      rotation: {x: -0.00000008566887, y: -0.000000005971731, z: 0.00000002708899, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Character1_Ctrl_RightHandPinky3
       parentName: Character1_Ctrl_RightHandPinky2
@@ -2273,12 +2272,13 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 0db4f9f156e934b8685874d922c3c461,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 0db4f9f156e934b8685874d922c3c461, type: 3}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
   avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
