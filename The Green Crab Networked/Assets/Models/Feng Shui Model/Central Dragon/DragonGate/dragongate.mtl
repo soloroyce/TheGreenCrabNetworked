@@ -1,0 +1,14 @@
+# MTL
+
+newmtl Layer_1_mtl
+	map_Kd dragongate_Layer_1.png
+
+
+newmtl dragon_gate_mtl
+	map_Kd dragongate_dragon_gate.png
+
+
+newmtl Layer_2_mtl
+	map_Kd dragongate_Layer_2.png
+
+

@@ -26,8 +26,11 @@ public class AnimationStateController1 : MonoBehaviour
         bool flyLeft = animator.GetBool("flyLeft");
         bool leftPressed = Input.GetKey("a");
 
-        bool flyBack =animator.GetBool("flyBack");
+        bool flyBack = animator.GetBool("flyBack");
         bool backPressed = Input.GetKey("s");
+
+        bool willSpin = animator.GetBool("willSpin");
+        bool qPressed = Input.GetKey("q");
 
     
         if (!isWalking && forwardPressed)
@@ -63,7 +66,16 @@ public class AnimationStateController1 : MonoBehaviour
             }
         if(flyBack && !backPressed)
             {
-                animator. SetBool("flyBack", false);
+                animator.SetBool("flyBack", false);
+            }
+
+        if (!willSpin && qPressed)
+            {
+            animator.SetBool("willSpin", true);
+            }
+        if (willSpin && !qPressed)
+            {
+            animator.SetBool("willSpin", false);
             }
 
         float xDirection = Input.GetAxis("Horizontal");
@@ -74,8 +86,11 @@ public class AnimationStateController1 : MonoBehaviour
 
         transform.position += moveDirection * speed;
 
+        if (moveDirection != Vector3.zero)
+        {
+            transform.forward = moveDirection;
+        }
 
-        
     }
 
 }

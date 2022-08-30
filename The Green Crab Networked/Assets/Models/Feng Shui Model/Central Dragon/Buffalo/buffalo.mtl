@@ -1,0 +1,14 @@
+# MTL
+
+newmtl Layer_1_mtl
+	map_Kd buffalo_Layer_1.png
+
+
+newmtl eye_mtl
+	map_Kd buffalo_eye.png
+
+
+newmtl body_mtl
+	map_Kd buffalo_body.png
+
+

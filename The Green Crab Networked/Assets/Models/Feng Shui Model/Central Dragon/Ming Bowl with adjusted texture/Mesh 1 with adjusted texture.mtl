@@ -1,0 +1,6 @@
+# VxScan
+
+newmtl m1
+	illum 1
+	Ns 0.000000
+	map_Kd Mesh 1 with adjusted texture.bmp
