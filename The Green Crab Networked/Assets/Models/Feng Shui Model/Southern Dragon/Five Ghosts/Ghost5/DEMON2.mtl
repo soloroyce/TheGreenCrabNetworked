@@ -1,0 +1,10 @@
+# MTL
+
+newmtl Layer_4_mtl
+	map_Kd DEMON2_Layer_4.png
+
+
+newmtl Layer_5_mtl
+	map_Kd DEMON2_Layer_5.png
+
+

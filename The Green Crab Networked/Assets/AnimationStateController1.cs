@@ -35,14 +35,15 @@ public class AnimationStateController1 : MonoBehaviour
     
         if (!isWalking && forwardPressed)
             {
-            animator.SetBool("isWalking", true);
+                animator.SetBool("isWalking", true);
             }
 
         if (isWalking && !forwardPressed)
             {
-            animator.SetBool("isWalking", false);
+                animator.SetBool("isWalking", false);
             }
 
+  
         if (!flyRight && rightPressed)
             {
                 animator.SetBool("flyRight", true);
