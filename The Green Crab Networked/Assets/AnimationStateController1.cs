@@ -80,10 +80,10 @@ public class AnimationStateController1 : MonoBehaviour
             }
 
         float xDirection = Input.GetAxis("Horizontal");
-        float zDirection = Input.GetAxis("Vertical");
+        float yDirection = Input.GetAxis("Vertical");
         
 
-        Vector3 moveDirection = new Vector3(xDirection, 0.0f, zDirection);
+        Vector3 moveDirection = new Vector3(xDirection, yDirection, 0.0f);
 
         transform.position += moveDirection * speed;
 
