@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.normalvr.normcore": "2.3.0",
+    "com.normalvr.normcore": "2.3.2",
     "com.unity.collab-proxy": "1.15.18",
     "com.unity.connect.share": "4.2.3",
     "com.unity.feature.characters-animation": "1.0.0",
