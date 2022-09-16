@@ -37,7 +37,7 @@ public class AnimationStateController1 : MonoBehaviour
         bool qPressed = Input.GetKey("q");
 
         bool flyDown = animator.GetBool("flyDown");
-        bool ePressed = Input.GetKey("e");
+        bool ePressed = Input.GetKey("space");
 
         if (!isWalking && forwardPressed)
             {
@@ -94,19 +94,11 @@ public class AnimationStateController1 : MonoBehaviour
             animator.SetBool("flyDown", false);
            }
 
-        if (Input.GetKey(KeyCode.Q))
-            {
-            character.Translate(Vector3.up * Time.deltaTime * thrust);
-            }
-        if (Input.GetKey(KeyCode.E))
-            {character.Translate(Vector3.down * Time.deltaTime * thrust);
-            }
 
         float xDirection = Input.GetAxis("Horizontal");
         float yDirection = Input.GetAxis("Vertical");
-        float zDirection = Input.GetAxis("Vertical");
         
-        Vector3 moveDirection = new Vector3(xDirection, zDirection, yDirection);
+        Vector3 moveDirection = new Vector3(xDirection, 0.0f, yDirection);
 
         transform.position += moveDirection * speed;
 
