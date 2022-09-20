@@ -1,24 +1,31 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-// public class VOarray : MonoBehaviour
-// {
-//     public AudioSource _as;
+public class voArray : MonoBehaviour
+{
+    public AudioSource _as;
     
-//     public AudioClip[] audioClipArray;
-//     // Start is called before the first frame update
-//     void void Awake() {
-//         _as = GetComponent<AudioSource>();
-//     }
-//     void Start()
-//     {
-//         _as.clip=audioClipArray[]
-//     }
+    public AudioClip[] audioClipArray;
 
-//     // Update is called once per frame
-//     void Update()
-//     {
+    void Awake() {
+        _as = GetComponent<AudioSource> ();
+    }
+
+    void Start()
+    {
+
+    }
+
+    void Voiceover(int i)
+    {
+        _as.clip=audioClipArray[i];
+        _as.PlayOneShot(_as.clip);
+    }
+
+
+    void Update()
+    {
         
-//     }
-// }
+    }
+}
