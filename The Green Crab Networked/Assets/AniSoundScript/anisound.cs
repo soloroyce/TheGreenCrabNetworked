@@ -6,10 +6,10 @@ public class anisound : MonoBehaviour
 {
     public GameObject player;
     public GameObject symbol;
-    public AudioSource sound;
-    public float maxDistance;
-    private float dis;
-
+    // public AudioSource sound;
+    // public float maxDistance;
+    // private float dis;
+    
     void Start()
     {
         
@@ -17,15 +17,16 @@ public class anisound : MonoBehaviour
 
     void Update()
     {
-        dis = Vector3.Distance(player.transform.position,symbol.transform.position);
+        // dis = Vector3.Distance(player.transform.position,symbol.transform.position);
     }
     
     void NewEvent()
     {
-        if(dis < maxDistance)
-        {
-            sound.Play();
-        }
+        GetComponent<AudioSource>().Play(0);
+        // if(dis < maxDistance)
+        // {
+        //     sound.Play();
+        // }
         
     }
 }
