@@ -4,15 +4,48 @@ using UnityEngine;
 
 public class collisionDetect : MonoBehaviour
 {
-    // Start is called before the first frame update
+    bool isEnter = false;
+    bool played = false;
+    int index;
+
     void Start()
     {
-        
+        index = GetIndex();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown("space") && isEnter)
+        {
+            if (played)
+            {
+                voArray.instance.VoiceoverEnd();
+                played = false;
+            }
+            else
+            {
+                voArray.instance.VoiceoverStart(index);
+                played = true;
+            }
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Entered:"+ gameObject.name);
+        voArray.instance.ShowTitle(index);
+        isEnter = true;
+    }
+
+    void OnTriggerExit(Collider other) {
+        Debug.Log("Left: "+ gameObject.name);
+        voArray.instance.HideTitle();
+        isEnter = false;
+    }
+
+    int GetIndex() {
+        string _name = gameObject.name;
+        string[] splitArray =  _name.Split("_");
+        return int.Parse(splitArray[0])-1;
     }
 }
