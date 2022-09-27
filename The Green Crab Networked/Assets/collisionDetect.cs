@@ -34,13 +34,16 @@ public class collisionDetect : MonoBehaviour
     {
         Debug.Log("Entered:"+ gameObject.name);
         voArray.instance.ShowTitle(index);
+        voArray.instance.enterSFX();
         isEnter = true;
     }
 
     void OnTriggerExit(Collider other) {
         Debug.Log("Left: "+ gameObject.name);
         voArray.instance.HideTitle();
+        voArray.instance.VoiceoverEnd();
         isEnter = false;
+        played = false;
     }
 
     int GetIndex() {

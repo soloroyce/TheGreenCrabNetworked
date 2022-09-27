@@ -13,6 +13,7 @@ public class voArray : MonoBehaviour
     public Text _title;
     public Text _script;
     public Image _scriptBackground;
+    public AudioSource signal;
 
     public AudioClip[] audioClipArray;
     public string[] textArray;
@@ -35,7 +36,7 @@ public class voArray : MonoBehaviour
     {
         //delay one second
         DOTween.KillAll();
-        _as.DOFade(1,0.05f);
+        _as.DOFade(1,0.1f);
         zoomin.TransitionTo(0.5f);
         _as.clip=audioClipArray[i];
         _as.PlayOneShot(_as.clip);
@@ -49,7 +50,7 @@ public class voArray : MonoBehaviour
         _as.DOFade(0,0.1f);
         _as.Stop();
         _script.DOFade(0, 1.0f);
-        _scriptBackground.DOFade(0.0f, 1.0f);
+        _scriptBackground.DOFade(0, 1.0f);
         normal.TransitionTo(1.0f);
         //zoom out
     }
@@ -64,6 +65,9 @@ public class voArray : MonoBehaviour
         _title.DOFade(0, 1.0f);
     }
 
+    public void enterSFX() {
+        signal.Play();
+    }
     void Update()
     {
         
