@@ -1,0 +1,94 @@
+{
+    "name": "Gamepad Controls",
+    "maps": [
+        {
+            "name": "Movement",
+            "id": "6dd18bb2-e617-4785-9b5f-36e3f5f9b679",
+            "actions": [
+                {
+                    "name": "Left",
+                    "type": "Value",
+                    "id": "6d2e9411-33fd-44a1-b2d2-a5ec0976a183",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Right",
+                    "type": "Value",
+                    "id": "76bc8bd4-54a8-4ce8-afbe-748ff7d4cbaf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Forward",
+                    "type": "Value",
+                    "id": "288935b9-c233-4eac-aa51-6b4e64e6bf4b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Backward",
+                    "type": "Value",
+                    "id": "4e51460d-003e-440f-a203-afed10e0e1e4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a36d416f-0ce5-4880-b62f-1ea52150fa07",
+                    "path": "<Gamepad>/leftStick/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dc15b566-2264-4ffb-9f8b-4d6fb3211939",
+                    "path": "<Gamepad>/leftStick/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2b7f1b18-c553-4945-bfca-41cc19fb7d4e",
+                    "path": "<Gamepad>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Forward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2252f5f0-a424-4fd0-bec7-8c8dc35fee21",
+                    "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Backward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
