@@ -15,7 +15,6 @@ public class AnimationStateController1 : MonoBehaviour
         animator = GetComponent<Animator>();
         Debug.Log(animator);
         character = GetComponent<Transform>();
-     
     }
 
     // Update is called once per frame
@@ -39,6 +38,7 @@ public class AnimationStateController1 : MonoBehaviour
         bool flyDown = animator.GetBool("flyDown");
         bool ePressed = Input.GetKey("space");
 
+
         if (!isWalking && forwardPressed)
             {
                 animator.SetBool("isWalking", true);
@@ -48,13 +48,12 @@ public class AnimationStateController1 : MonoBehaviour
             {
                 animator.SetBool("isWalking", false);
             }
-
   
         if (!flyRight && rightPressed)
             {
                 animator.SetBool("flyRight", true);
             }
-        if (flyRight && !rightPressed)
+        else
             {
                 animator.SetBool("flyRight", false);
             }
@@ -62,7 +61,7 @@ public class AnimationStateController1 : MonoBehaviour
             {
                 animator.SetBool("flyLeft", true);
             }
-        if (flyLeft && !leftPressed)
+        else 
             {
                 animator.SetBool("flyLeft", false);
             }
