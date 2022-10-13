@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/IntroScene.unity
+    guid: 3cd84df1e6d8763448244fe3e681dc22
+  - enabled: 1
+    path: Assets/SingaporeNetworked.unity
+    guid: c535daeeb817f6c4daa25dfc1b630b2a
   m_configObjects: {}
